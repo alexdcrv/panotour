@@ -8,14 +8,13 @@ const points = document.querySelectorAll('.point')
 
 
 const point = document.getElementById("1")
+const point2 = document.getElementById("2")
+const point3 = document.getElementById("3")
+const point4 = document.getElementById("4")
 
 //
-const point4 = document.getElementById("2")
 
-//
-const point3 = document.getElementById("5")
-const point2 = document.getElementById("3")
-const point5 = document.getElementById("4")
+// const point5 = document.getElementById("4")
 // const point6 = document.getElementById("6")
 // const point7 = document.getElementById("7")
 
@@ -23,11 +22,11 @@ const point5 = document.getElementById("4")
 //////////////////////////////////////////////
 //PANORAMA
 
-const pano  = new PANOLENS.ImagePanorama('asset/3k_corridor.jpg'); //hall
-const panorama2  = new PANOLENS.ImagePanorama('asset/3k_kitchen.jpg'); //kitchen
-const panorama3  = new PANOLENS.ImagePanorama('asset/3k_bath.jpg'); //toilet
-const panorama4  = new PANOLENS.ImagePanorama('asset/3k_bedroom.jpg'); //bedroom
-const panorama5  = new PANOLENS.ImagePanorama('asset/3k_hall.jpg'); //зал
+const pano  = new PANOLENS.ImagePanorama('asset/гостиная.jpg'); //hall
+const panorama2  = new PANOLENS.ImagePanorama('asset/кухня.jpg'); //kitchen
+const panorama3  = new PANOLENS.ImagePanorama('asset/спальня.jpg'); //toilet
+const panorama4  = new PANOLENS.ImagePanorama('asset/санузел.jpg'); //bedroom
+// const panorama5  = new PANOLENS.ImagePanorama('asset/3k_hall.jpg'); //зал
 // const panorama6  = new PANOLENS.ImagePanorama('asset/1_bad-min.jpg'); //зал
 // const panorama7  = new PANOLENS.ImagePanorama('asset/2_hall-min.jpg'); //зал
 
@@ -37,9 +36,9 @@ const panorama5  = new PANOLENS.ImagePanorama('asset/3k_hall.jpg'); //зал
 
 //from hall
 // pano.link( panorama2, new THREE.Vector3(-900.48, 0, 3500));
-pano.link( panorama3, new THREE.Vector3(-2100, 0, 300) );
-pano.link( panorama2, new THREE.Vector3(-1000, 0, -2300) );
-pano.link( panorama5, new THREE.Vector3(4500, 0, 0) );
+// pano.link( pano,      new THREE.Vector3(4500, 0, 0) );
+// pano.link( panorama2, new THREE.Vector3(-1000, 0, -2300) );
+// pano.link( panorama3, new THREE.Vector3(-2100, 0, 300) );
 pano.link( panorama4, new THREE.Vector3(2800, 0, -1100) );
 
 //hall 2
@@ -61,7 +60,7 @@ panorama3.link( pano, new THREE.Vector3(-2000, 0, -200));
 //room
 panorama4.link( pano, new THREE.Vector3(-2000, 0, -300));
 //guest
-panorama5.link( pano, new THREE.Vector3(-1000, 0, -2000));
+// panorama5.link( pano, new THREE.Vector3(-1000, 0, -2000));
 
 // panorama6.link( panorama7, new THREE.Vector3(-2000, 0, 2000));
 
@@ -141,15 +140,15 @@ panorama4.addEventListener('enter', () => {
 
 ///////////////////////////////////////////////////// guestroom
 
-panorama5.addEventListener('enter', () => {
-    footInfo.innerHTML = "Зал"
-    viewer.panorama.rotation.y = 0;
-    points.forEach(point => {
-        point.classList.remove('pointH')
-    })
-    point5.classList.add('pointH')
+// panorama5.addEventListener('enter', () => {
+//     footInfo.innerHTML = "Зал"
+//     viewer.panorama.rotation.y = 0;
+//     points.forEach(point => {
+//         point.classList.remove('pointH')
+//     })
+//     point5.classList.add('pointH')
 
-})
+// })
 
 
 
@@ -217,14 +216,14 @@ point4.onclick = () => {
 }
 
 
-point5.onclick = () => {
-    points.forEach(point => {
-        point.classList.remove('pointH')
-    })
-    point5.classList.add('pointH')
-    viewer.setPanorama(panorama5)
+// point5.onclick = () => {
+//     points.forEach(point => {
+//         point.classList.remove('pointH')
+//     })
+//     point5.classList.add('pointH')
+//     viewer.setPanorama(panorama5)
 
-}
+// }
 
 // point6.onclick = () => {
 //     points.forEach(point => {
@@ -276,13 +275,13 @@ foot1.addEventListener('mouseover', () => {
 
 
 //guest
-foot2.onclick = () => { 
-    viewer.setPanorama(panorama5)
-    footInfo.innerHTML = "Зал"
-}
-foot2.addEventListener('mouseover', () => {
-    footInfo.innerHTML = "Зал"
-})
+// foot2.onclick = () => { 
+//     viewer.setPanorama(panorama5)
+//     footInfo.innerHTML = "Зал"
+// }
+// foot2.addEventListener('mouseover', () => {
+//     footInfo.innerHTML = "Зал"
+// })
 
 
 //////////////room
@@ -338,7 +337,7 @@ foot5.onclick = () => {
 // }
 /////////////////////////////////////
 
-viewer.add( pano, panorama2, panorama3, panorama4, panorama5 );
+viewer.add( pano, panorama2, panorama3, panorama4 );
 
 
 

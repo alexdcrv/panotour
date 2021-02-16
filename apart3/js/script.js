@@ -39,7 +39,7 @@ const panorama4  = new PANOLENS.ImagePanorama('asset/санузел.jpg'); //bed
 // pano.link( pano,      new THREE.Vector3(4500, 0, 0) );
 // pano.link( panorama2, new THREE.Vector3(-1000, 0, -2300) );
 // pano.link( panorama3, new THREE.Vector3(-2100, 0, 300) );
-pano.link( panorama4, new THREE.Vector3(-1500, 0, 200) );
+pano.link( panorama4, new THREE.Vector3(-2000, 0, 400) );
 
 //hall 2
 // panorama7.link( panorama3, new THREE.Vector3(-4100.48, 0, -500) );
@@ -54,9 +54,9 @@ pano.link( panorama4, new THREE.Vector3(-1500, 0, 200) );
 
 
 //kitchen
-panorama2.link( pano, new THREE.Vector3(-1000, 0, -300));
+panorama2.link( pano, new THREE.Vector3(-1700, 0, 200));
 //toilet
-panorama3.link( pano, new THREE.Vector3(-1500, 0, -1000));
+panorama3.link( pano, new THREE.Vector3(-2000, 0, -1200));
 //room
 panorama4.link( pano, new THREE.Vector3(-1500, 0, 0));
 //guest

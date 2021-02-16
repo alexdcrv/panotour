@@ -207,7 +207,7 @@ const foot5 = document.getElementById('room5')
 
 
 ////////////////
-hall
+//hall
 foot1.onclick = () => { 
     viewer.setPanorama(panorama)
     footInfo.innerHTML = "Прихожая"

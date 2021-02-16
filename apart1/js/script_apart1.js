@@ -199,7 +199,7 @@ let footInfo = document.getElementById('footerContent');
 
 
 ///////////////////////////
-const foot1 = document.getElementById('room1')
+// const foot1 = document.getElementById('room1')
 const foot2 = document.getElementById('room2')
 const foot3 = document.getElementById('room3')
 const foot4 = document.getElementById('room4')
@@ -208,13 +208,13 @@ const foot5 = document.getElementById('room5')
 
 ////////////////
 //hall
-foot1.onclick = () => { 
-    viewer.setPanorama(panorama)
-    footInfo.innerHTML = "Прихожая"
-}
-foot1.addEventListener('mouseover', () => {
-    footInfo.innerHTML = "Прихожая"
-})
+// foot1.onclick = () => { 
+//     viewer.setPanorama(panorama)
+//     footInfo.innerHTML = "Прихожая"
+// }
+// foot1.addEventListener('mouseover', () => {
+//     footInfo.innerHTML = "Прихожая"
+// })
 
 
 
@@ -222,7 +222,7 @@ foot1.addEventListener('mouseover', () => {
 
 //guest
 foot2.onclick = () => { 
-    viewer.setPanorama(panorama4)
+    viewer.setPanorama(panorama3)
     footInfo.innerHTML = "Кухня"
 }
 foot2.addEventListener('mouseover', () => {
@@ -232,7 +232,7 @@ foot2.addEventListener('mouseover', () => {
 
 //////////////room
 foot3.onclick = () => { 
-    viewer.setPanorama(panorama4)
+    viewer.setPanorama(panorama2)
     footInfo.innerHTML = "Комната"
 }
 foot3.addEventListener('mouseover', () => {
@@ -245,7 +245,7 @@ foot3.addEventListener('mouseover', () => {
 
 //kitchen
 foot4.onclick = () => { 
-    viewer.setPanorama(panorama2)
+    viewer.setPanorama(panorama4)
     footInfo.innerHTML = "Санузел"
 }
 foot4.addEventListener('mouseover', () => {
@@ -261,7 +261,7 @@ foot5.addEventListener('mouseover', () => {
 })
 
 foot5.onclick = () => { 
-    viewer.setPanorama(panorama3)
+    viewer.setPanorama(panorama)
     footInfo.innerHTML = "Коридор"
 }
 

@@ -1,0 +1,346 @@
+html, body  {
+    
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+
+}
+
+
+
+#container {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
+#map {
+    z-index:1;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    width: 10%;
+
+}
+
+#map2 {
+    z-index:1;
+    position: absolute;
+    top: 0px;
+    left: 1%;
+    width: 10%;
+    
+    
+
+}
+
+
+#map3 {
+    z-index:1;
+    position: absolute;
+    top: 0px;
+    left: 1%;
+    width: 13%;
+    
+    
+
+}
+.map3{
+    width: 13% !important;
+}
+
+.map {
+    position: absolute;
+    left:20% !important;
+    width: 30% !important;
+    
+}
+
+
+
+#map1 {
+    z-index:1;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    width: 10%;
+
+}
+
+
+
+ .st0:hover {
+    fill: red;
+    
+}
+
+
+    
+.st0{
+    fill:#FFFFFF;
+}
+
+.point:hover{
+    fill: rgba(61, 111, 219, 0.8);
+}
+
+.pointH {
+    fill: rgba(79, 107, 184, 0.8);
+}
+
+
+
+
+
+.footer{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    left: 1%;
+    bottom: 1%;
+    width: 150px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 25px;
+}
+
+.footerI{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    left: 165px;
+    bottom: 1%;
+    width: 70px;
+    height: 40px;
+   
+    
+    
+}
+.footerI .fas {
+    color: white;
+    transform: translateY(50%);
+
+}
+.footerI .fas:hover {
+    color: rgb(51, 54, 177);
+    
+}
+
+.footer:hover {
+    background-color: rgba(0,0,0,0.6);
+}
+
+
+
+.header {
+    z-index: 1;
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    width: 250px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+
+}
+.header:hover{
+    background-color: rgba(0,0,0,0.6);
+}
+
+.info{
+    z-index: 1;
+    top:60px;
+    position: absolute;
+    right: 1%;
+    width: 370px;
+    transition: height 200ms ease;
+    height: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    
+}
+
+.infoExpand {
+   
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.exp_item{
+    
+    
+    margin-top: 10px;
+    width: 95%;
+    height: 70px;
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    vertical-align: bottom;
+
+}
+
+
+#iconHead{
+    
+    color: white;
+    display:inline-block;
+    transform: translateY(28%);
+    
+}
+.exp_item:hover .fa-circle-notch:before{
+    content: "\f054";
+}
+
+.exp_item:hover{
+    background-color: rgba(0,0,0,0.6);
+}
+.inf-text{
+    color: seashell;
+}
+
+
+#iconUP{
+    align-self: center;
+    color: seashell;
+}
+
+.headerContent {
+    
+    flex-direction: row;
+    color: #FFFFFF;
+    align-self: center;
+}
+#icon{
+    color: #FFFFFF;
+    align-self: center;
+}
+
+
+
+.new{
+    bottom: 14vw;
+}
+
+
+    .bottomInfo{
+   
+        z-index: 1;
+        bottom:0;
+        position: absolute;
+        left: 0px;
+        width: 100vw !important;
+        transition: height 200ms ease;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        height: 13.5vw !important;
+        
+        
+    
+    }
+  
+     
+    .room{
+        position: relative;
+        z-index: 2;
+        margin-left: 1.6vw;
+        width: 10.5vw;
+        margin-top: 1.6vw;
+        height: 10.5vw;
+        display: inline-block ;
+        background-size: cover;
+        align-self: center; 
+        cursor: pointer;
+        transition: ease 500ms all;
+        display: inline-block ;
+    }
+    
+    .room:hover{
+        border: 0px solid rgb(10, 10, 17);
+        transform: translateY(-5px); 
+        transition: ease 500ms all;
+    }
+    
+    .expand{
+    height: 130px;
+    display: flex;
+    justify-content: space-evenly;
+    
+
+}
+
+
+@media   (max-width: 900px) {
+    
+    .svgimg {
+        transform: translateX(53vw) rotate(-90deg) translateX(7vh);
+        width: 30vw; 
+        height: auto;
+    }
+    .newPlan {
+        left: -8vw;
+        width:auto ;
+        top: 19vh;
+        height: 200px;
+        z-index: 1;
+        cursor: pointer;
+        transform: rotate(90deg);
+    }
+
+.allbot {
+    width: 200vw;
+}
+.bottomInfo{
+   
+   
+    position: absolute;
+    left: 0px;
+    width: 100vw !important;
+    transition: height 200ms ease;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    height: 250px !important;
+    
+    
+
+}
+
+.expand{
+    height: 250px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.room {
+    width: 220px;
+    height: 220px;
+    flex-shrink: 0;
+}
+.new{
+    bottom: 260px;
+}
+
+}
+
+
+
+.footerContent{
+    flex-direction: row;
+    color: #FFFFFF;
+    align-self: center;
+}
+
+

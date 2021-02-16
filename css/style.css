@@ -30,11 +30,11 @@ html, body  {
 #map2 {
     z-index:1;
     position: absolute;
-    top: 0px;
+    top: 1%;
     left: 1%;
-    width: 10%;
+    width: 20%;
     
-    
+    transition: all .3s ease-in-out;
 
 }
 
@@ -50,13 +50,15 @@ html, body  {
 
 }
 .map3{
-    width: 13% !important;
+    width: 17% !important;
 }
 
 .map {
     position: absolute;
-    left:20% !important;
-    width: 30% !important;
+    width: 40% !important;
+    left:50% !important;
+    top: 50% !important;
+    transform: translate3D(-50%, -50%, 0) !important;
     
 }
 
@@ -170,7 +172,7 @@ html, body  {
 
 .infoExpand {
    
-    height: 150px;
+    height: 290px;
     display: flex;
     flex-direction: column;
 }
@@ -179,14 +181,15 @@ html, body  {
 .exp_item{
     
     
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    padding-left: 18px;
     width: 95%;
     height: 70px;
     align-items: baseline;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 6fr 2fr 1fr;
+    
+    text-align: left;
     vertical-align: bottom;
 
 }

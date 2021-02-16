@@ -424,8 +424,14 @@ plan.onclick = () =>{
     map.classList.toggle('map')
 }
 
-map.onclick = () => {
-    setTimeout(function(){map.classList.remove('map');}, 1500);
+map.onclick = (e) => {
+    console.log(e.target)
+    if(e.target.id==='mapImg'){
+        map.classList.contains('map')? map.classList.remove('map') :  map.classList.toggle('map')
+    } else {
+        map.classList.contains('map') && setTimeout(function(){map.classList.remove('map');}, 500)
+    }
+
 }
 
 

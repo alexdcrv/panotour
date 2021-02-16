@@ -9,10 +9,10 @@ const points = document.querySelectorAll('.point')
 
 const point = document.getElementById("1")
 const point2 = document.getElementById("2")
-const point5 = document.getElementById("3")
-const point6 = document.getElementById("4")
-const point3 = document.getElementById("5")
-const point4 = document.getElementById("6")
+const point3 = document.getElementById("3")
+const point4 = document.getElementById("4")
+// const point3 = document.getElementById("5")
+// const point4 = document.getElementById("6")
 
 
 //////////////////////////////////////////////
@@ -134,43 +134,43 @@ panorama4.addEventListener('enter', () => {
 //ADD CUSTOM PANORAMA LINKING TO MAP
 ///////////////////////////////////////
 
-// point.onclick = () => {
-//     points.forEach(point => {
-//         point.classList.remove('pointH')
-//     })
-//     point.classList.add('pointH')
-//     viewer.setPanorama(panorama)
+point.onclick = () => {
+    points.forEach(point => {
+        point.classList.remove('pointH')
+    })
+    point.classList.add('pointH')
+    viewer.setPanorama(panorama)
 
-// }
-
-
-// point2.onclick = () => {
-//     points.forEach(point => {
-//         point.classList.remove('pointH')
-//     })
-//     point2.classList.add('pointH')
-//     viewer.setPanorama(panorama2)
-
-// }
+}
 
 
-// point3.onclick = () => {
-//     points.forEach(point => {
-//         point.classList.remove('pointH')
-//     })
-//     point3.classList.add('pointH')
-//     viewer.setPanorama(panorama3)
+point2.onclick = () => {
+    points.forEach(point => {
+        point.classList.remove('pointH')
+    })
+    point2.classList.add('pointH')
+    viewer.setPanorama(panorama2)
 
-// }
+}
 
-// point4.onclick = () => {
-//     points.forEach(point => {
-//         point.classList.remove('pointH')
-//     })
-//     point4.classList.add('pointH')
-//     viewer.setPanorama(panorama4)
 
-// }
+point3.onclick = () => {
+    points.forEach(point => {
+        point.classList.remove('pointH')
+    })
+    point3.classList.add('pointH')
+    viewer.setPanorama(panorama3)
+
+}
+
+point4.onclick = () => {
+    points.forEach(point => {
+        point.classList.remove('pointH')
+    })
+    point4.classList.add('pointH')
+    viewer.setPanorama(panorama4)
+
+}
 
 
 // point5.onclick = () => {

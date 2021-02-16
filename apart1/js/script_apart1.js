@@ -134,53 +134,53 @@ panorama4.addEventListener('enter', () => {
 //ADD CUSTOM PANORAMA LINKING TO MAP
 ///////////////////////////////////////
 
-point.onclick = () => {
-    points.forEach(point => {
-        point.classList.remove('pointH')
-    })
-    point.classList.add('pointH')
-    viewer.setPanorama(panorama)
+// point.onclick = () => {
+//     points.forEach(point => {
+//         point.classList.remove('pointH')
+//     })
+//     point.classList.add('pointH')
+//     viewer.setPanorama(panorama)
 
-}
-
-
-point2.onclick = () => {
-    points.forEach(point => {
-        point.classList.remove('pointH')
-    })
-    point2.classList.add('pointH')
-    viewer.setPanorama(panorama2)
-
-}
+// }
 
 
-point3.onclick = () => {
-    points.forEach(point => {
-        point.classList.remove('pointH')
-    })
-    point3.classList.add('pointH')
-    viewer.setPanorama(panorama3)
+// point2.onclick = () => {
+//     points.forEach(point => {
+//         point.classList.remove('pointH')
+//     })
+//     point2.classList.add('pointH')
+//     viewer.setPanorama(panorama2)
 
-}
-
-point4.onclick = () => {
-    points.forEach(point => {
-        point.classList.remove('pointH')
-    })
-    point4.classList.add('pointH')
-    viewer.setPanorama(panorama4)
-
-}
+// }
 
 
-point5.onclick = () => {
-    points.forEach(point => {
-        point.classList.remove('pointH')
-    })
-    point5.classList.add('pointH')
-    viewer.setPanorama(panorama)
+// point3.onclick = () => {
+//     points.forEach(point => {
+//         point.classList.remove('pointH')
+//     })
+//     point3.classList.add('pointH')
+//     viewer.setPanorama(panorama3)
 
-}
+// }
+
+// point4.onclick = () => {
+//     points.forEach(point => {
+//         point.classList.remove('pointH')
+//     })
+//     point4.classList.add('pointH')
+//     viewer.setPanorama(panorama4)
+
+// }
+
+
+// point5.onclick = () => {
+//     points.forEach(point => {
+//         point.classList.remove('pointH')
+//     })
+//     point5.classList.add('pointH')
+//     viewer.setPanorama(panorama)
+
+// }
 
 // point6.onclick = () => {
 //     points.forEach(point => {

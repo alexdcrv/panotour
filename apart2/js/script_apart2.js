@@ -12,8 +12,8 @@ const point = document.getElementById("1")
 const point2 = document.getElementById("2")
 
 //3 toilet / 2 bedroom /  4 kitchen / 1 hall / 5
-// const point3 = document.getElementById("3")
-// const point4 = document.getElementById("4")
+const point3 = document.getElementById("3")
+const point4 = document.getElementById("4")
 //////////////////////////////////////////////
 //PANORAMA
 
@@ -147,23 +147,23 @@ point2.onclick = () => {
 }
 
 
-// point3.onclick = () => {
-//     points.forEach(point => {
-//         point.classList.remove('pointH')
-//     })
-//     point3.classList.add('pointH')
-//     viewer.setPanorama(panorama3)
+point3.onclick = () => {
+    points.forEach(point => {
+        point.classList.remove('pointH')
+    })
+    point3.classList.add('pointH')
+    viewer.setPanorama(panorama3)
 
-// }
+}
 
-// point4.onclick = () => {
-//     points.forEach(point => {
-//         point.classList.remove('pointH')
-//     })
-//     point4.classList.add('pointH')
-//     viewer.setPanorama(panorama4)
+point4.onclick = () => {
+    points.forEach(point => {
+        point.classList.remove('pointH')
+    })
+    point4.classList.add('pointH')
+    viewer.setPanorama(panorama4)
 
-// }
+}
 
 
 

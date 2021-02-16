@@ -9,21 +9,21 @@ const points = document.querySelectorAll('.point')
 
 const point = document.getElementById("1")
 const point2 = document.getElementById("2")
-const point5 = document.getElementById("3")
-const point6 = document.getElementById("4")
-const point3 = document.getElementById("5")
-const point4 = document.getElementById("6")
+// const point5 = document.getElementById("3")
+// const point6 = document.getElementById("4")
+// const point3 = document.getElementById("5")
+// const point4 = document.getElementById("6")
 
 
 //////////////////////////////////////////////
 //PANORAMA
 
 
-const panorama  = new PANOLENS.ImagePanorama('asset/2k_corr.jpg'); //corridor
-const panorama2  = new PANOLENS.ImagePanorama('asset/2k_bath.jpg'); //bath
-const panorama3  = new PANOLENS.ImagePanorama('asset/2k_corr2.jpg'); //corridor2
-const panorama4  = new PANOLENS.ImagePanorama('asset/2k_hall.jpg'); //room
-const panorama5  = new PANOLENS.ImagePanorama('asset/2k_kitchen.jpg'); //kitch
+const panorama  = new PANOLENS.ImagePanorama('asset/гостиная.jpg'); //corridor
+const panorama2  = new PANOLENS.ImagePanorama('asset/санузел.jpg'); //bath
+// const panorama3  = new PANOLENS.ImagePanorama('asset/2k_corr2.jpg'); //corridor2
+// const panorama4  = new PANOLENS.ImagePanorama('asset/2k_hall.jpg'); //room
+// const panorama5  = new PANOLENS.ImagePanorama('asset/2k_kitchen.jpg'); //kitch
 
 
 
@@ -32,8 +32,8 @@ const panorama5  = new PANOLENS.ImagePanorama('asset/2k_kitchen.jpg'); //kitch
 
 //from corr1
 panorama.link( panorama2, new THREE.Vector3(4200, 0, 2000));//to bath
-panorama.link( panorama4, new THREE.Vector3(2500, 0, -400)); //to room
-panorama.link( panorama3, new THREE.Vector3(3200, -2000, 1700)); //to corr2
+// panorama.link( panorama4, new THREE.Vector3(2500, 0, -400)); //to room
+// panorama.link( panorama3, new THREE.Vector3(3200, -2000, 1700)); //to corr2
 
 
 
@@ -41,7 +41,7 @@ panorama.link( panorama3, new THREE.Vector3(3200, -2000, 1700)); //to corr2
 
 
 // panorama2.link( panorama, new THREE.Vector3(5000, 0, 1000));
-panorama2.link( panorama3, new THREE.Vector3(-1500, 0, -1000));//to corridor2
+panorama2.link( panorama, new THREE.Vector3(-1500, 0, -1000));//to corridor2
 // panorama2.link( panorama3, new THREE.Vector3(-3000, 0, 3000));
 // panorama2.link( panorama6, new THREE.Vector3(-3800, 0, -1000)); //to guest
 
@@ -51,19 +51,19 @@ panorama2.link( panorama3, new THREE.Vector3(-1500, 0, -1000));//to corridor2
 
 
 //corr2
-panorama3.link( panorama, new THREE.Vector3(-2700, -1600, -1100));//to corr1
-panorama3.link( panorama2, new THREE.Vector3(2000, 0, 400));//to bath
-panorama3.link( panorama4, new THREE.Vector3(-1700, 0, -2300));//to room
-panorama3.link( panorama5, new THREE.Vector3(1700, 0, -2300));//to kitchen
+// panorama3.link( panorama, new THREE.Vector3(-2700, -1600, -1100));//to corr1
+// panorama3.link( panorama2, new THREE.Vector3(2000, 0, 400));//to bath
+// panorama3.link( panorama4, new THREE.Vector3(-1700, 0, -2300));//to room
+// panorama3.link( panorama5, new THREE.Vector3(1700, 0, -2300));//to kitchen
 //room
 
 
 
-panorama4.link( panorama, new THREE.Vector3(-1800, 0, 1900));//to corr1
+// panorama4.link( panorama, new THREE.Vector3(-1800, 0, 1900));//to corr1
 
 
-//guest
-panorama5.link( panorama3, new THREE.Vector3(-1600, 0, 1200));//to corridor2
+// //guest
+// panorama5.link( panorama3, new THREE.Vector3(-1600, 0, 1200));//to corridor2
 
 // panorama6.link( panorama2, new THREE.Vector3(-2200, 0, -500));
 
@@ -118,44 +118,44 @@ panorama2.addEventListener('enter', () => {
 
 //////////////////////////////////////////////////////////
 //toilet
-panorama3.addEventListener('enter', () => {
-    footInfo.innerHTML = "Коридор"
-    viewer.panorama.rotation.y = 0;
-    points.forEach(point => {
-        point.classList.remove('pointH')
-    })
-    point3.classList.add('pointH')
+// panorama3.addEventListener('enter', () => {
+//     footInfo.innerHTML = "Коридор"
+//     viewer.panorama.rotation.y = 0;
+//     points.forEach(point => {
+//         point.classList.remove('pointH')
+//     })
+//     point3.classList.add('pointH')
 
-})
+// })
 
 
 
 
 /////////////////////////////////////////////////////////// bedroom
-panorama4.addEventListener('enter', () => {
-    footInfo.innerHTML = "Комната"
-    viewer.panorama.rotation.y = 0;
-    points.forEach(point => {
-        point.classList.remove('pointH')
-    })
-    point4.classList.add('pointH')
+// panorama4.addEventListener('enter', () => {
+//     footInfo.innerHTML = "Комната"
+//     viewer.panorama.rotation.y = 0;
+//     points.forEach(point => {
+//         point.classList.remove('pointH')
+//     })
+//     point4.classList.add('pointH')
 
-})
+// })
 
 
 
 
 ///////////////////////////////////////////////////// guestroom
 
-panorama5.addEventListener('enter', () => {
-    footInfo.innerHTML = "Кухня"
-    viewer.panorama.rotation.y = 0;
-    points.forEach(point => {
-        point.classList.remove('pointH')
-    })
-    point5.classList.add('pointH')
+// panorama5.addEventListener('enter', () => {
+//     footInfo.innerHTML = "Кухня"
+//     viewer.panorama.rotation.y = 0;
+//     points.forEach(point => {
+//         point.classList.remove('pointH')
+//     })
+//     point5.classList.add('pointH')
 
-})
+// })
 
 
 // panorama6.addEventListener('enter', () => {
@@ -193,33 +193,33 @@ point2.onclick = () => {
 }
 
 
-point3.onclick = () => {
-    points.forEach(point => {
-        point.classList.remove('pointH')
-    })
-    point3.classList.add('pointH')
-    viewer.setPanorama(panorama3)
+// point3.onclick = () => {
+//     points.forEach(point => {
+//         point.classList.remove('pointH')
+//     })
+//     point3.classList.add('pointH')
+//     viewer.setPanorama(panorama3)
 
-}
+// }
 
-point4.onclick = () => {
-    points.forEach(point => {
-        point.classList.remove('pointH')
-    })
-    point4.classList.add('pointH')
-    viewer.setPanorama(panorama4)
+// point4.onclick = () => {
+//     points.forEach(point => {
+//         point.classList.remove('pointH')
+//     })
+//     point4.classList.add('pointH')
+//     viewer.setPanorama(panorama4)
 
-}
+// }
 
 
-point5.onclick = () => {
-    points.forEach(point => {
-        point.classList.remove('pointH')
-    })
-    point5.classList.add('pointH')
-    viewer.setPanorama(panorama5)
+// point5.onclick = () => {
+//     points.forEach(point => {
+//         point.classList.remove('pointH')
+//     })
+//     point5.classList.add('pointH')
+//     viewer.setPanorama(panorama5)
 
-}
+// }
 
 // point6.onclick = () => {
 //     points.forEach(point => {
@@ -318,7 +318,7 @@ foot5.onclick = () => {
 
 /////////////////////////////////////
 
-viewer.add( panorama, panorama2, panorama3, panorama4, panorama5 );
+viewer.add( panorama, panorama2,);
 
 
 
@@ -409,8 +409,14 @@ plan.onclick = () =>{
     map.classList.toggle('map')
 }
 
-map.onclick = () => {
-    setTimeout(function(){map.classList.remove('map');}, 1500);
+map.onclick = (e) => {
+    console.log(e.target)
+    if(e.target.id==='mapImg'){
+        map.classList.contains('map')? map.classList.remove('map') :  map.classList.toggle('map')
+    } else {
+        map.classList.contains('map') && setTimeout(function(){map.classList.remove('map');}, 500)
+    }
+
 }
 
 

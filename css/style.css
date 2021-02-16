@@ -170,7 +170,7 @@ html, body  {
 
 .infoExpand {
    
-    height: 270px;
+    height: 150px;
     display: flex;
     flex-direction: column;
 }

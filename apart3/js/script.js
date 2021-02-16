@@ -262,31 +262,31 @@ const foot5 = document.getElementById('room5')
 
 ////////////////
 //hall
-foot1.onclick = () => { 
-    viewer.setPanorama(pano)
-    footInfo.innerHTML = "Прихожая"
-}
-foot1.addEventListener('mouseover', () => {
-    footInfo.innerHTML = "Прихожая"
-})
-
-
-
-
-
-//guest
-// foot2.onclick = () => { 
-//     viewer.setPanorama(panorama5)
-//     footInfo.innerHTML = "Зал"
+// foot1.onclick = () => { 
+//     viewer.setPanorama(pano)
+//     footInfo.innerHTML = "Прихожая"
 // }
-// foot2.addEventListener('mouseover', () => {
-//     footInfo.innerHTML = "Зал"
+// foot1.addEventListener('mouseover', () => {
+//     footInfo.innerHTML = "Прихожая"
 // })
+
+
+
+
+
+// guest
+foot2.onclick = () => { 
+    viewer.setPanorama(pano)
+    footInfo.innerHTML = "Гостинная"
+}
+foot2.addEventListener('mouseover', () => {
+    footInfo.innerHTML = "Гостинная"
+})
 
 
 //////////////room
 foot3.onclick = () => { 
-    viewer.setPanorama(panorama4)
+    viewer.setPanorama(panorama3)
     footInfo.innerHTML = "Спальня"
 }
 foot3.addEventListener('mouseover', () => {
@@ -315,7 +315,7 @@ foot5.addEventListener('mouseover', () => {
 })
 
 foot5.onclick = () => { 
-    viewer.setPanorama(panorama3)
+    viewer.setPanorama(panorama4)
     footInfo.innerHTML = "Санузел"
 }
 

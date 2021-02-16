@@ -416,25 +416,31 @@ map.onclick = () => {
 
 
 
+const apart1  = document.getElementById('1k')
 
-const apart2  = document.getElementById('1k')
+apart1.onclick = function(){
+    window.location ="../apart1/1room1.html"
+}
+
+
+const apart2  = document.getElementById('2k')
 
 apart2.onclick = function(){
-    window.location ="../apart2/1kk.html"
+    window.location ="../apart2/1room2.html"
 }
 
 
-const apart3  = document.getElementById('2k')
+const apart3  = document.getElementById('3k')
 
 apart3.onclick = function(){
-    window.location ="../apart1/2kk.html"
+    window.location ="../apart3/2room1.html"
 }
 
 
 
 
-const apart4  = document.getElementById('3k')
+const apart4  = document.getElementById('4k')
 
 apart4.onclick = function(){
-    window.location ="../apart3/3kk.html"
+    window.location ="../apart4/2room2.html"
 }

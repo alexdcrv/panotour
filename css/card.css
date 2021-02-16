@@ -26,8 +26,8 @@ body {
 .grid-conteiner {
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 260px);
-    grid-template-rows: 390px 250px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: max-content;
     grid-row-gap: 10px;
     grid-column-gap: 40px;
     justify-items: center;

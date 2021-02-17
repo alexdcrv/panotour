@@ -11,7 +11,7 @@ const point = document.getElementById("1")
 const point2 = document.getElementById("2")
 const point3 = document.getElementById("3")
 const point4 = document.getElementById("4")
-
+const point5 = document.getElementById("4")
 //
 
 // const point5 = document.getElementById("4")
@@ -21,7 +21,7 @@ const point4 = document.getElementById("4")
 
 //////////////////////////////////////////////
 //PANORAMA
-
+const enter = new PANOLENS.ImagePanorama('asset/коридор.jpg')
 const pano  = new PANOLENS.ImagePanorama('asset/гостиная.jpg'); //hall
 const panorama2  = new PANOLENS.ImagePanorama('asset/кухня.jpg'); //kitchen
 const panorama3  = new PANOLENS.ImagePanorama('asset/спальня.jpg'); //toilet
@@ -35,11 +35,14 @@ const panorama4  = new PANOLENS.ImagePanorama('asset/санузел.jpg'); //bed
 // 3 - зал //5 ce
 
 //from hall
-// pano.link( panorama2, new THREE.Vector3(-900.48, 0, 3500));
-// pano.link( pano,      new THREE.Vector3(4500, 0, 0) );
-// pano.link( panorama2, new THREE.Vector3(-1000, 0, -2300) );
-// pano.link( panorama3, new THREE.Vector3(-2100, 0, 300) );
-pano.link( panorama4, new THREE.Vector3(-2000, 0, 400) );
+enter.link( panorama4, new THREE.Vector3(-500.48, 0, 1500));
+enter.link( panorama3,      new THREE.Vector3(-3500, 0, -1400) );
+enter.link( pano, new THREE.Vector3(-1000, 0, -2000) );
+enter.link( panorama2, new THREE.Vector3(-3000, 0, -900) );
+
+
+//room
+pano.link( enter, new THREE.Vector3(-2000, 0, 400) );
 
 //hall 2
 // panorama7.link( panorama3, new THREE.Vector3(-4100.48, 0, -500) );
@@ -54,11 +57,11 @@ pano.link( panorama4, new THREE.Vector3(-2000, 0, 400) );
 
 
 //kitchen
-panorama2.link( pano, new THREE.Vector3(-1700, 0, 200));
+panorama2.link( enter, new THREE.Vector3(-1700, 0, 200));
 //toilet
-panorama3.link( pano, new THREE.Vector3(-2000, 0, -1200));
+panorama3.link( enter, new THREE.Vector3(-2000, 0, -1200));
 //room
-panorama4.link( pano, new THREE.Vector3(-1500, 0, 0));
+panorama4.link( enter, new THREE.Vector3(-1500, 0, 0));
 //guest
 // panorama5.link( pano, new THREE.Vector3(-1000, 0, -2000));
 
@@ -82,8 +85,20 @@ viewer.getControl().momentumScalingFactor *= 0.3; // inertia/spring after drag
 
 //panorama event listener 
 //hall
+
+enter.addEventListener('enter', () => {
+    footInfo.innerHTML = "Коридор"
+    viewer.panorama.rotation.y = 0;
+    
+    points.forEach(point => {
+        point.classList.remove('pointH')
+    })
+    point.classList.add('pointH')
+})
+
+
 pano.addEventListener('enter', () => {
-    footInfo.innerHTML = "Прихожая"
+    footInfo.innerHTML = "Гостинная"
     viewer.panorama.rotation.y = 0;
     
     points.forEach(point => {
@@ -176,23 +191,20 @@ panorama4.addEventListener('enter', () => {
 /////////////////////////////////////////////////////////////
 //ADD CUSTOM PANORAMA LINKING TO MAP
 ///////////////////////////////////////
-
 point.onclick = () => {
     points.forEach(point => {
         point.classList.remove('pointH')
     })
     point.classList.add('pointH')
-    viewer.setPanorama(pano)
+    viewer.setPanorama(enter)
 
 }
-
-
 point2.onclick = () => {
     points.forEach(point => {
         point.classList.remove('pointH')
     })
     point2.classList.add('pointH')
-    viewer.setPanorama(panorama2)
+    viewer.setPanorama(pano)
 
 }
 
@@ -202,15 +214,25 @@ point3.onclick = () => {
         point.classList.remove('pointH')
     })
     point3.classList.add('pointH')
-    viewer.setPanorama(panorama3)
+    viewer.setPanorama(panorama2)
 
 }
+
 
 point4.onclick = () => {
     points.forEach(point => {
         point.classList.remove('pointH')
     })
     point4.classList.add('pointH')
+    viewer.setPanorama(panorama3)
+
+}
+
+point5.onclick = () => {
+    points.forEach(point => {
+        point.classList.remove('pointH')
+    })
+    point5.classList.add('pointH')
     viewer.setPanorama(panorama4)
 
 }
@@ -262,13 +284,13 @@ const foot5 = document.getElementById('room5')
 
 ////////////////
 //hall
-// foot1.onclick = () => { 
-//     viewer.setPanorama(pano)
-//     footInfo.innerHTML = "Прихожая"
-// }
-// foot1.addEventListener('mouseover', () => {
-//     footInfo.innerHTML = "Прихожая"
-// })
+foot1.onclick = () => { 
+    viewer.setPanorama(enter)
+    footInfo.innerHTML = "Коридор"
+}
+foot1.addEventListener('mouseover', () => {
+    footInfo.innerHTML = "Коридор"
+})
 
 
 
@@ -337,7 +359,7 @@ foot5.onclick = () => {
 // }
 /////////////////////////////////////
 
-viewer.add( pano, panorama2, panorama3, panorama4 );
+viewer.add(enter, pano, panorama2, panorama3, panorama4 );
 
 
 

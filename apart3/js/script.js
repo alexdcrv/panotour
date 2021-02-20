@@ -11,7 +11,7 @@ const point = document.getElementById("1")
 const point2 = document.getElementById("2")
 const point3 = document.getElementById("3")
 const point4 = document.getElementById("4")
-const point5 = document.getElementById("4")
+const point5 = document.getElementById("5")
 //
 
 // const point5 = document.getElementById("4")
@@ -93,7 +93,7 @@ enter.addEventListener('enter', () => {
     points.forEach(point => {
         point.classList.remove('pointH')
     })
-    point.classList.add('pointH')
+    point5.classList.add('pointH')
 })
 
 
@@ -196,7 +196,7 @@ point.onclick = () => {
         point.classList.remove('pointH')
     })
     point.classList.add('pointH')
-    viewer.setPanorama(enter)
+    viewer.setPanorama(pano)
 
 }
 point2.onclick = () => {
@@ -204,7 +204,7 @@ point2.onclick = () => {
         point.classList.remove('pointH')
     })
     point2.classList.add('pointH')
-    viewer.setPanorama(pano)
+    viewer.setPanorama(panorama2)
 
 }
 
@@ -214,7 +214,7 @@ point3.onclick = () => {
         point.classList.remove('pointH')
     })
     point3.classList.add('pointH')
-    viewer.setPanorama(panorama2)
+    viewer.setPanorama(panorama3)
 
 }
 
@@ -224,7 +224,7 @@ point4.onclick = () => {
         point.classList.remove('pointH')
     })
     point4.classList.add('pointH')
-    viewer.setPanorama(panorama3)
+    viewer.setPanorama(panorama4)
 
 }
 
@@ -233,7 +233,7 @@ point5.onclick = () => {
         point.classList.remove('pointH')
     })
     point5.classList.add('pointH')
-    viewer.setPanorama(panorama4)
+    viewer.setPanorama(enter)
 
 }
 

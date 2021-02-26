@@ -30,7 +30,7 @@ const panorama4  = new PANOLENS.ImagePanorama('assets/1_gostinnaya.jpg'); //bedr
 
 
 //from corridor
-pano.link( panorama2, new THREE.Vector3(500, 0,1500));
+pano.link( panorama2, new THREE.Vector3(-500, 0,1500));
 pano.link(panorama3, new THREE.Vector3(-2500.48, 0, 800) );
 pano.link(panorama4, new THREE.Vector3(-3000.48, 0, 2000) );
 

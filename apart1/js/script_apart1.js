@@ -37,6 +37,8 @@ panorama.link( panorama4, new THREE.Vector3(2500, 0, -1400)); //to bath
 
 panorama2.link( panorama3, new THREE.Vector3(-1800, 0, -600));//to kitcheb
 
+
+
 //kitchen
 
 panorama3.link( panorama, new THREE.Vector3(2200, 0, 1700));//to corridor

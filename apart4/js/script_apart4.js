@@ -121,7 +121,7 @@ panorama3.addEventListener('enter', () => {
     points.forEach(point => {
         point.classList.remove('pointH')
     })
-    point.classList.add('pointH')
+    point3.classList.add('pointH')
 
 })
 
@@ -135,7 +135,7 @@ panorama4.addEventListener('enter', () => {
     points.forEach(point => {
         point.classList.remove('pointH')
     })
-    point.classList.add('pointH')
+    point4.classList.add('pointH')
 
 })
 
@@ -150,7 +150,7 @@ panorama5.addEventListener('enter', () => {
     points.forEach(point => {
         point.classList.remove('pointH')
     })
-    point.classList.add('pointH')
+    point5.classList.add('pointH')
 
 })
 
@@ -190,33 +190,33 @@ point2.onclick = () => {
 }
 
 
-// point3.onclick = () => {
-//     points.forEach(point => {
-//         point.classList.remove('pointH')
-//     })
-//     point3.classList.add('pointH')
-//     viewer.setPanorama(panorama3)
+point3.onclick = () => {
+    points.forEach(point => {
+        point.classList.remove('pointH')
+    })
+    point3.classList.add('pointH')
+    viewer.setPanorama(panorama3)
 
-// }
+}
 
-// point4.onclick = () => {
-//     points.forEach(point => {
-//         point.classList.remove('pointH')
-//     })
-//     point4.classList.add('pointH')
-//     viewer.setPanorama(panorama4)
+point4.onclick = () => {
+    points.forEach(point => {
+        point.classList.remove('pointH')
+    })
+    point4.classList.add('pointH')
+    viewer.setPanorama(panorama4)
 
-// }
+}
 
 
-// point5.onclick = () => {
-//     points.forEach(point => {
-//         point.classList.remove('pointH')
-//     })
-//     point5.classList.add('pointH')
-//     viewer.setPanorama(panorama5)
+point5.onclick = () => {
+    points.forEach(point => {
+        point.classList.remove('pointH')
+    })
+    point5.classList.add('pointH')
+    viewer.setPanorama(panorama5)
 
-// }
+}
 
 // point6.onclick = () => {
 //     points.forEach(point => {

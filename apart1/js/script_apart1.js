@@ -29,12 +29,10 @@ const panorama4  = new PANOLENS.ImagePanorama('asset/su.jpg'); //tualet
 panorama.link( panorama3, new THREE.Vector3(3700, 0, 0));//to kitchen
 panorama.link( panorama4, new THREE.Vector3(2500, 0, -1400)); //to bath
 
-
-
-
 //from room
 
 
+//asda
 panorama2.link( panorama3, new THREE.Vector3(-1800, 0, -600));//to kitcheb
 
 

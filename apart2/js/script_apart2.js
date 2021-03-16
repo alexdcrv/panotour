@@ -21,7 +21,7 @@ const point4 = document.getElementById("4")
 const panorama2  = new PANOLENS.ImagePanorama('assets/1_bath.jpg'); //kitchen
 const pano  = new PANOLENS.ImagePanorama('assets/1_koridor.jpg'); //hall
 
-//const panorama  = new PANOLENS.ImagePanorama('assets/kitchen.jpg'); //kitchen
+//const panorama  = new PANOLENS.ImagePanorama('assets/kitchen.jpg'); //kit
 const panorama3  = new PANOLENS.ImagePanorama('assets/1_kitchen.jpg'); //toilet
 const panorama4  = new PANOLENS.ImagePanorama('assets/1_gostinnaya.jpg'); //bedroom
 
